@@ -152,7 +152,7 @@ def tab_map():
     b = b[b.harvest_kg > 0]; b["loss_pct"] = b.total_loss_kg / b.harvest_kg * 100; b["loss_t"] = b.total_loss_kg / 1000
     b["lat"], b["lon"] = b.district.map(lambda x: DIST[x][0]), b.district.map(lambda x: DIST[x][1])
     b["nearest_cold_room_km"] = [hav(r.lat, r.lon, stores.lat.values, stores.lon.values).min().round(1) for r in b.itertuples()]
-    st.plotly_chart(px.scatter_map(b, lat="lat", lon="lon", size="loss_t", color="loss_pct", hover_name="district", zoom=7, height=450,
+    st.plotly_chart(px.scatter_map(b, lat="lat", lon="lon", size="loss_t", color="loss_pct", hover_name="district", size_max=30, center=dict(lat=-1.95, lon=29.9), zoom=7, height=450,
                                    color_continuous_scale="RdYlGn_r", map_style="open-street-map"), width="stretch")
     st.dataframe(b.sort_values("loss_t", ascending=False)[["district", "loss_t", "loss_pct", "nearest_cold_room_km"]].round(2), hide_index=True)
     st.subheader(t["ov"]); st.dataframe(cropsum[cropsum.crop.isin(hort + ["Paddy rice", "Maize", "Bush bean"])], hide_index=True)
