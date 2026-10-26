@@ -2,7 +2,7 @@
 NISR 2026 Big Data Hackathon - **Track 1: Agricultural Productivity**
 Team: **IRADUKUNDA Thiery** (Rwandan citizen), **BARITONDA Jean Pacifique** · **INES Ruhengeri**
 
-**Live app:** https://REPLACE-AFTER-DEPLOY.streamlit.app · **Demo video:** `demo/demo.webm` (under 3 min) · **Repo:** https://github.com/tiradukunda57-cpu/syep-nisr-hackathon-2026
+**Live app:** https://syep-rwanda.streamlit.app/· **Demo video:** `demo/demo.webm` (under 3 min) · **Repo:** https://github.com/tiradukunda57-cpu/syep-nisr-hackathon-2026
 
 ## 1. Problem and national alignment
 **Track 1 challenge (NISR):** "Use data to develop innovative solutions that address real agricultural challenges facing Rwanda."
